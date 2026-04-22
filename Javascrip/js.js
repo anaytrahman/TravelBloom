@@ -27,7 +27,7 @@ const destinations = {
     image:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48"
   },
-    beaches: {
+  beaches: {
     city: "Al, NDA",
     timeZone: "America/New_York",
     description:
@@ -35,13 +35,15 @@ const destinations = {
     image:
       "./../assets/images/beac1.png"
   },
-   temple: {
+  temple: {
     city: "India, Uttarakhand",
     timeZone: "America/New_York",
     description:
       "Most beautiful temple in India.",
     image:
-      "./../assets/images/tem1.png"
+      "./../assets/images/tem1.png",
+    image2:
+      "./../assets/images/tem2.png"
   },
   //  temple: {
   //   city: "India, Uttarakhand",
@@ -59,22 +61,22 @@ function search() {
     .getElementById("searchInput")
     .value.toLowerCase();
 
-   if(!input.trim()) {
+  if (!input.trim()) {
     alert("Please enter a search query.");
     return;
-   }else{
-     const data = destinations[input];
-  debugger
-  if (!data) {
-    alert("No data available for this search.");
-    return;
-  }
+  } else {
+    const data = destinations[input];
+    debugger
+    if (!data) {
+      alert("No data available for this search.");
+      return;
+    }
 
-  const time = new Date().toLocaleTimeString("en-US", {
-    timeZone: data.timeZone
-  });
+    const time = new Date().toLocaleTimeString("en-US", {
+      timeZone: data.timeZone
+    });
 
-  document.getElementById("resultContainer").innerHTML = `
+    document.getElementById("resultContainer").innerHTML = `
     <div class="time">
       Current Local Time (${data.timeZone}): ${time}
     </div>
@@ -87,8 +89,13 @@ function search() {
         <button class="btn">Visit</button>
       </div>
     </div>
+     ${data.image2 ? `
+    <div class="card">
+      <img src="${data.image2}" />
+    </div>
+  ` : ""}
   `;
-   }
+  }
 }
 /**clear field */
 
@@ -116,7 +123,7 @@ function showSection(sectionId) {
   }
 }
 
-function submitBtn(){
+function submitBtn() {
 
   alert("Form submitted successfully!");
 }

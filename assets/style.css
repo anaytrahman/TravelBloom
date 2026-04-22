@@ -64,7 +64,7 @@ nav a {
 
 /* Hero */
 .hero {
-  height: 100vh;
+  height: 152vh;
   background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') no-repeat center/cover;
   position: relative;
   display: flex;
@@ -140,6 +140,8 @@ nav a {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   width: 341px;
   max-height: 397px;
+     margin-bottom: 1rem;
+
 }
 
 .card img {
