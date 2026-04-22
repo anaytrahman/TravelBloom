@@ -9,7 +9,7 @@ const destinations = {
     description:
       "A diverse and cosmopolitan city, Toronto is known for its iconic CN Tower and vibrant culture.",
     image:
-      "https://images.unsplash.com/photo-1503627387403-7c6c1c3c0d5b"
+       "./../assets/images/canada.png",
   },
   india: {
     city: "Mumbai, India",
@@ -33,7 +33,9 @@ const destinations = {
     description:
       "a beautiful beach destination.",
     image:
-      "./../assets/images/beac1.png"
+      "./../assets/images/beac1.png",
+       image2:
+      "./../assets/images/beach2.png"
   },
   temple: {
     city: "India, Uttarakhand",
