@@ -26,7 +26,31 @@ const destinations = {
       "New York City is famous for Times Square, Central Park, and its fast-paced lifestyle.",
     image:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48"
-  }
+  },
+    beaches: {
+    city: "Al, NDA",
+    timeZone: "America/New_York",
+    description:
+      "a beautiful beach destination.",
+    image:
+      "./../assets/images/beac1.png"
+  },
+   temple: {
+    city: "India, Uttarakhand",
+    timeZone: "America/New_York",
+    description:
+      "Most beautiful temple in India.",
+    image:
+      "./../assets/images/tem1.png"
+  },
+  //  temple: {
+  //   city: "India, Uttarakhand",
+  //   timeZone: "America/New_York",
+  //   description:
+  //     "Most beautiful temple in India.",
+  //   image:
+  //     "./../assets/images/tem1.png"
+  // }
 };
 
 /** search function for destination */
@@ -93,6 +117,6 @@ function showSection(sectionId) {
 }
 
 function submitBtn(){
-  
+
   alert("Form submitted successfully!");
 }
