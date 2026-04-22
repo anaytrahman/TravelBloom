@@ -72,3 +72,27 @@ function clearInput() {
   document.getElementById("searchInput").value = "";
   document.getElementById("resultContainer").innerHTML = "";
 }
+
+// ==========================
+// SECTION SWITCHING
+// ==========================
+function showSection(sectionId) {
+  const sections = ["homeSection", "aboutSection", "contactSection"];
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.add("hidden");
+    }
+  });
+
+  const active = document.getElementById(sectionId);
+  if (active) {
+    active.classList.remove("hidden");
+  }
+}
+
+function submitBtn(){
+  
+  alert("Form submitted successfully!");
+}

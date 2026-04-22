@@ -1,59 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>TravelBloom</title>
   <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
 
-<header class="navbar">
-  <div class="logo">✈ TravelBloom</div>
+  <header class="navbar">
+    <div class="logo">✈ TravelBloom</div>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-  </nav>
+    <nav>
+      <a href="#" onclick="showSection('homeSection')">Home</a>
+      <a href="#" onclick="showSection('aboutSection')">About Us</a>
+      <a href="#" onclick="showSection('contactSection')">Contact Us</a>
+    </nav>
 
-  <div class="search-box">
-    <div class="input-wrapper">
+    <div class="search-box">
+      <div class="input-wrapper">
         <input type="text" id="searchInput" placeholder="Enter a destination (e.g, US, Canada, India)">
+      </div>
+      <button onclick="search()">Search</button>
+      <button onclick="clearInput()">Clear</button>
     </div>
-    <button onclick="search()">Search</button>
-    <button onclick="clearInput()">Clear</button>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="content-wrapper">
+
+      <!-- HOME -->
+      <div class="content" id="homeSection">
+        <!-- your existing UI -->
+        <h1>
+          EXPLORE <br>
+          DREAM <br>
+          DESTINATION
+        </h1>
+
+        <p class="courage">
+          It encourages exploration of unfamiliar territories...
+        </p>
+
+        <button class="btn">BOOK NOW</button>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="content hidden content-wrp" id="aboutSection">
+        <h1>ABOUT US</h1>
+        <div class="wrp-about">
+          <p class="courage">We help travelers discover the world’s most beautiful destinations with ease and
+            confidence.
+            Our goal is to create unforgettable journeys through curated experiences and personalized planning.
+            From dream vacations to hidden gems, we make every trip meaningful and memorable.</p>
+        </div>
+        <div class="our-team">
+          <h2 class="team-text">Our Team </h2>
+          <div class="team-box-wrp">
+            <div class="team-bx">
+              <div class="pic-team">
+                <div class="pic-wrp">
+                  <img src="./assets/images/ar.png" alt="Mayank Arora">
+                </div>
+              </div>
+              <div class="details-team">
+                <h6> Mayank Arora </h6>
+                <p> Mayank Arora is responsible for...</p>
+                <div class="btn-role">
+                  <button class="btn">CEO</button>
+                </div>
+              </div>
+            </div>
+            <div class="team-bx">
+              <div class="pic-team">
+                <div class="pic-wrp">
+                  <img src="./assets/images/ar.png" alt="Mayank Arora">
+                </div>
+              </div>
+              <div class="details-team">
+                <h6>Anayt Rahman </h6>
+                <p> Anayt Rahman is responsible for...</p>
+                <div class="btn-role">
+                  <button class="btn">Developer</button>
+                </div>
+              </div>
+            </div>
+            <div class="team-bx">
+              <div class="pic-team">
+                <div class="pic-wrp">
+                  <img src="./assets/images/pic2.png" alt="Mayank Arora">
+                </div>
+              </div>
+              <div class="details-team">
+                <h6> Reena Sen </h6>
+                <p> Reena Sen is responsible for...</p>
+                <div class="btn-role">
+                  <button class="btn">Marketing</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="content hidden content-wrp contact-us" id="contactSection">
+        <div class="contactus-sec">
+          <div class="heading">
+            <h1>Contact US</h1>
+          </div>
+          <div class="contact-form">
+            <form action="#">
+              <div class="col">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+              </div>
+              <div class="col">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+              </div>
+              <div class="col">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <button class="btn-submit" type="submit" onclick="submitBtn()">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="social">
+      <span>🐦</span>
+      <span>📘</span>
+      <span>📸</span>
+      <span>▶</span>
+    </div>
+
+  </section>
+  <div class="show-search-wrapper">
+    <div id="resultContainer" class="results"></div>
   </div>
-</header>
 
-<section class="hero">
-  <div class="overlay"></div>
 
-  <div class="content">
-    <h1>
-      EXPLORE <br>
-      DREAM <br>
-      DESTINATION
-    </h1>
-
-    <p>
-      It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes while pursuing your dream destination.
-    </p>
-
-    <button class="btn">BOOK NOW</button>
-  </div>
-
-  <div class="social">
-    <span>🐦</span>
-    <span>📘</span>
-    <span>📸</span>
-    <span>▶</span>
-  </div>
-   
-</section>
-<div class="show-search-wrapper">
-     <div id="resultContainer" class="results"></div>
-</div>  
-
-<script src="./Javascrip/js.js"></script>
+  <script src="./Javascrip/js.js"></script>
 </body>
+
 </html>
